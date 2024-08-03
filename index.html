@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap">
+    <title>Challenge Decodificador</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="assets/Logo.png" alt="logo">
+    </header>
+
+    <main>
+
+        <section class="section__1">
+            <div class="conteudo__texto">
+                <textarea placeholder="Insira o texto aqui" class="area__texto" cols="39" rows="4"></textarea>
+            </div>
+
+            <div class="alerta">
+                <img src="assets/bi_exclamation-circle-fill.png" alt="alerta">
+                <p>somente letras minusculas e sem acentos</p>
+            </div>
+            
+            <div class="botoes__section_1">
+                <input type="button" class="botao__criptografar" value="Criptografar">
+                <input type="button" class="botao__descriptografar" value="Descriptografar">
+            </div>
+        </section>
+
+
+        <section class="section__2" >
+            <div class="lado__direito">
+
+                <div class="section__2__imagem">
+                    <img src="assets/High quality products 1 1.png" alt="crianca">
+                </div>
+
+                <div class="section__2__paragrafo">
+                    <h2>Nenhuma mensagem encontrada</h2>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+
+            </div> 
+            
+                <div class="section__2__botao">
+                    <input type="button"class="botao__copiar" value="Copiar">
+                </div>
+
+                <div class="section__2__resultado">
+                    <p class="texto__resultado"></p>
+                </div>
+
+            
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
