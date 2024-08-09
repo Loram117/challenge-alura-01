@@ -238,20 +238,4 @@ const observer = new MutationObserver(() => {
 observer.observe(resultado, { childList: true });
 ```
 
-## Instruções para Desenvolvimento
 
-1. **Clone o Repositório**: Clone este repositório para sua máquina local.
-2. **Abra o Projeto**: Abra o arquivo `index.html` em um navegador.
-3. **Edite e Teste**: Modifique o código conforme necessário e teste as funcionalidades.
-
-## Contribuições
-
-Se você deseja contribuir para o projeto, por favor, envie um pull request com suas alterações e descreva as melhorias ou correções que foram feitas.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
-
-Sinta-se à vontade para ajustar o README conforme necessário!
