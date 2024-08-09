@@ -3,7 +3,12 @@ var botaoDescriptografar = document.querySelector(".botao__descriptografar");
 var imagemSection2 = document.querySelector(".section__2__imagem");
 var paragrafoSection2 = document.querySelector(".section__2__paragrafo");
 var resultado = document.querySelector(".texto__resultado");
-var caixaTexto = document.querySelector(".area__texto")
+var caixaTexto = document.querySelector(".area__texto");
+var botaoCopiar = document.querySelector(".botao__copiar");
+
+
+botaoCopiar.classList.add("ocultar");
+
 
 botaoCriptografar.onclick = criptografar;
 botaoDescriptografar.onclick = descriptografar;
@@ -12,14 +17,14 @@ function criptografar() {
     ocultarArea();
     var areaTexto = recuperarTexto();
     resultado.textContent = criptografarTexto(areaTexto);
-    caixaTexto.value = ""
+    caixaTexto.value = "";
 }
 
 function descriptografar() {
     ocultarArea();
     var areaTexto = recuperarTexto();
     resultado.textContent = descriptografarTexto(areaTexto);
-    caixaTexto.value = ""
+    caixaTexto.value = "";
 }
 
 function recuperarTexto() {
@@ -61,7 +66,6 @@ function criptografarTexto(mensagem) {
         }
     }
     return textoFinal;
-
 }
 
 function descriptografarTexto(mensagem){
@@ -97,13 +101,20 @@ function descriptografarTexto(mensagem){
     }
 
     return textoFinal;
-
 }
 
-const botaoCopiar = document.querySelector(".botao__copiar"); 
-    botaoCopiar.addEventListener("click", () => {
+
+botaoCopiar.addEventListener("click", () => {
     var conteudo = document.querySelector(".texto__resultado").textContent;
     navigator.clipboard.writeText(conteudo);
     alert("Texto copiado com Sucesso!");
-    
 });
+
+
+const observer = new MutationObserver(() => {
+    if (resultado.textContent.trim() !== "") {
+        botaoCopiar.classList.remove('ocultar');
+    }
+});
+
+observer.observe(resultado, { childList: true });

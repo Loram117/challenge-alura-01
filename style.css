@@ -181,13 +181,7 @@ main {
     margin-top: 20px;
 }
 
-.rodape{
-    color: var(--cor-terciaria);
-    background-color: var(--cor-secundaria);
-    padding: 12px;
-    text-align: center;
-    font-family: var(--fonte-primaria);
-}
+
 
 .ocultar{
     display: none;
@@ -198,18 +192,19 @@ main {
     main {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 100px;
     }
 
     .section__1 {
         width: 70%;
-        height: auto;
+        height: 720px;
         margin: 0;
         padding: 0;
         align-items: center;
     }
 
     .section__2 {
-        width: 100%;
+        width: 638px;
         height: fit-content;
         padding-top: 50px;
         margin: 20px 0; 
@@ -234,6 +229,10 @@ main {
         
     }
 
+    .ocultar{
+        display: none !important;
+    }
+
     .texto__resultado{
         width: fit-content;
         height: fit-content;
@@ -245,4 +244,92 @@ main {
     .section__2__resultado {
         position: inherit;
     }
+}
+
+@media (max-width: 375px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .section__1 {
+        width: 90%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .conteudo__texto {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .area__texto {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .botoes__section__1{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .botao__criptografar, .botao__descriptografar, .botao__copiar{
+        width: 343px;
+    }
+
+    .section__2 {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 10px 0;
+        flex-direction: column;
+    }
+
+    .section__2__paragrafo h2 {
+        font-size: 20px;
+    }
+
+    .section__2__paragrafo p {
+        font-size: 14px;
+    }
+
+    .section__2__resultado {
+        position: inherit;
+        width: 100%;
+    }
+
+    .texto__resultado {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section__2__botao {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .botao__copiar {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    
+    .ocultar {
+        display: none !important;
+    }
+}
+
+.rodape{
+    color: var(--cor-terciaria);
+    background-color: var(--cor-secundaria);
+    padding: 12px;
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    position: relative;
+    
 }
