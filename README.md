@@ -237,5 +237,5 @@ const observer = new MutationObserver(() => {
 
 observer.observe(resultado, { childList: true });
 ```
-
-
+link para o projeto: 
+https://challenge-alura-01.vercel.app/
